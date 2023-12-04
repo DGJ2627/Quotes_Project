@@ -1,0 +1,127 @@
+name: final_project
+description: "A new Flutter project."
+
+
+publish_to: 'none' 
+
+
+
+
+
+
+
+
+
+
+
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+
+
+
+
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  
+  
+  cupertino_icons: ^1.0.2
+  firebase_core:
+  firebase_auth:
+  iconsax:
+  get:
+  http:
+  intl:
+  logger:
+  url_launcher:
+  get_storage:
+  flutter_native_splash:
+  smooth_page_indicator:
+  carousel_slider: ^4.2.1
+  dots_indicator: ^3.0.0
+  google_sign_in:
+  cloud_firestore:
+  flutter_otp_text_field:
+  google_fonts:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  
+  
+  
+  
+  
+  flutter_lints: ^2.0.0
+
+
+
+
+
+flutter:
+
+  
+  
+  
+  uses-material-design: true
+
+  assets:
+    - Assets/Images/
+    - Assets/Fonts/
+  
+  
+  
+
+  
+  
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/Fonts/Poppins-Bold.ttf
+          weight: 300
+        - asset: assets/Fonts/Poppins-BoldItalic.ttf
+          weight: 400
+        - asset: assets/Fonts/Poppins-Italic.ttf
+          style: italic
+        - asset: assets/Fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/Fonts/Poppins-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/Fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/Fonts/Poppins-Bold.ttf
+          weight: 800
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
