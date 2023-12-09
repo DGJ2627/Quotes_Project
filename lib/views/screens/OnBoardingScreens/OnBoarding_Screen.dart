@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import '../../../Constant/Colors.dart';
 import '../../../Widgets/OnBoardingWidget/OnBoarding_Card.dart';
 import '../../../Widgets/OnBoardingWidget/Onboaring_Imagelist.dart';
+import '../../Login/LoginPage.dart';
 import 'Primary_button.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -13,7 +14,7 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
-  final PageController pageController = PageController(initialPage: 0);
+  final PageController pageController = PageController(initialPage: 0,);
   int _currentIndex = 0;
 
   @override
@@ -58,7 +59,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         const EdgeInsets.only(top: 65, left: 32, right: 32, bottom: 40),
         child: PrimaryButton(
           onTap: () {
-            if (_currentIndex == pageViewList.length - 1) {
+            if (_currentIndex == 2) {
+              Get.to((const LoginPage()));
             } else {
               pageController.nextPage(
                 duration: const Duration(milliseconds: 500),

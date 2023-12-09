@@ -59,7 +59,7 @@ class _PrimaryButtonState extends State<PrimaryButton>
     return GestureDetector(
       onTap: () {
         _controller.forward().then((_) {
-          Get.to((const LoginPage()));
+
         });
         widget.onTap();
       },

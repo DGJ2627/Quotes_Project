@@ -52,6 +52,8 @@ dependencies:
   cloud_firestore:
   flutter_otp_text_field:
   google_fonts:
+  sqflite:
+  path:
 
 dev_dependencies:
   flutter_test:
@@ -78,6 +80,7 @@ flutter:
   assets:
     - Assets/Images/
     - Assets/Fonts/
+    - lib/Json/quotesJsonData.json
   
   
   

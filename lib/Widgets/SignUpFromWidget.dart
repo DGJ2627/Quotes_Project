@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../Constant/Image_String.dart';
 import '../Controller/SignUpController.dart';
+import '../model/DetailsModel.dart';
 import '../views/screens/HomeScreens/HomePage.dart';
 
 class SignUpFromWidget extends StatelessWidget {
@@ -127,10 +128,15 @@ class SignUpFromWidget extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 if (formKey.currentState!.validate()) {
+                  DetailsModel information =
+                  DetailsModel( email: controller.email.text);
+
+
                   SignUpController.instance.registerUser(
                       controller.email.text.trim(),
                       controller.password.text.trim());
-                  Get.to(const HomePage());
+                  // Get.to(const HomePage());
+                  Get.offAll(const HomePage());
                 } else {
                   Get.defaultDialog(
                     title: "SignUp Failed",

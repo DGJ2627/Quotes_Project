@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../Controller/SignIn_Controller.dart';
+import '../model/DetailsModel.dart';
 import '../views/forget_password/fortget_password_options/ShowBottomSheet.dart';
 import '../views/screens/HomeScreens/HomePage.dart';
 
@@ -87,11 +88,17 @@ class LoginFormWidget extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 if (formKey.currentState!.validate()) {
+
+                  DetailsModel information =
+                  DetailsModel( email: controller.email.text);
+
+
                   SignInController.instance.signInMethod(
                       controller.email.text,
                       controller.password.text,
                   );
-                  Get.to(const HomePage());
+                  Get.offAll(const HomePage(),);
+                  // Get.to(const HomePage());
                 } else {
                   Get.defaultDialog(
                     title: "SignUp Failed",

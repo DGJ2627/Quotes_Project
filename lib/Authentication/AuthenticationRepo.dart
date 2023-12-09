@@ -1,5 +1,7 @@
 import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:final_project/views/Login/LoginPage.dart';
+import 'package:final_project/views/screens/HomeScreens/HomePage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +16,7 @@ class AuthenticationRepo extends GetxController {
 
   @override
   void onReady() {
-    Future.delayed(const Duration(seconds: 5));
+    Future.delayed(const Duration(seconds: 3));
     firebaseUser = Rx<User?>(auth.currentUser);
     firebaseUser.bindStream(auth.userChanges());
     ever(firebaseUser, setInitialScreen);
@@ -22,8 +24,8 @@ class AuthenticationRepo extends GetxController {
 
   setInitialScreen(User? user) {
     user == null
-        ? Get.offAllNamed('/WelcomePage')
-        : Get.offAllNamed('/HomePage');
+        ? Get.offAll(const LoginPage())
+        : Get.offAll(const HomePage());
   }
 
   Future<void> createUserWithEmailAndPassword(
@@ -62,9 +64,6 @@ class AuthenticationRepo extends GetxController {
 
 
   Future<void> logOut() async => await auth.signOut();
-
-
-
 
 
 }

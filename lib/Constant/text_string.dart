@@ -1,7 +1,7 @@
 class CustomText{
 
 
-  static const String appName = "";
+  static const String appName = "TenJiku";
   static const String appTagLine = "We can Show Your Mood in Quotes";
 
 
